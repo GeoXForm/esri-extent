@@ -1,0 +1,36 @@
+{
+  "name": "esri-extent",
+  "description": "Get the Esri-formatted extent of a GeoJSON feature collection.",
+  "version": "1.0.0",
+  "author": "Nate Goldman <nate@ngoldman.me>",
+  "bugs": {
+    "url": "https://github.com/ngoldman/esri-extent/issues"
+  },
+  "devDependencies": {
+    "standard": "^3.2.0",
+    "tap-spec": "^2.2.2",
+    "tape": "^3.5.0"
+  },
+  "homepage": "https://github.com/ngoldman/esri-extent",
+  "keywords": [
+    "bounding",
+    "box",
+    "collection",
+    "esri",
+    "extent",
+    "feature",
+    "geojson"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngoldman/esri-extent.git"
+  },
+  "scripts": {
+    "test": "standard && node test | tap-spec"
+  },
+  "dependencies": {
+    "bbox2extent": "^1.0.1"
+  }
+}
