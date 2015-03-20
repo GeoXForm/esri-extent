@@ -1,10 +1,10 @@
 var esriExtent = require('..')
-var example = require('./geojson-spec-example.json')
+var exampleBasic = require('./geojson-spec-example.json')
 var exampleMulti = require('./geojson-multi-spec-example.json')
-var portlandParksLines = require('./portland-parks-lines.json')
-var portlandParksPolygons = require('./portland-parks-polygons.json')
+var complexMultiLines = require('./portland-parks-lines.json')
+var complexMultiPolygons = require('./portland-parks-polygons.json')
 var test = require('tape')
-var expected = {
+var expectedBasic = {
   xmin: 100,
   ymin: 0,
   xmax: 105,
@@ -15,7 +15,7 @@ var expected = {
   }
 }
 var expectedMulti = {
-  xmin: 98,
+  xmin: 99,
   ymin: 0,
   xmax: 107,
   ymax: 2,
@@ -46,10 +46,10 @@ var expectedParkPolygons = {
 }
 
 test('basic geojson spec example', function (t) {
-  esriExtent(example, function (err, extent) {
+  esriExtent(exampleBasic, function (err, extent) {
     if (err) throw err
 
-    t.deepEqual(extent, expected)
+    t.deepEqual(extent, expectedBasic)
     t.end()
   })
 })
@@ -64,7 +64,7 @@ test('basic geojson multi spec example', function (t) {
 })
 
 test('complex multiline string feature collection', function (t) {
-  esriExtent(portlandParksLines, function (err, extent) {
+  esriExtent(complexMultiLines, function (err, extent) {
     if (err) throw err
 
     t.deepEqual(extent, expectedParkLines)
@@ -73,7 +73,7 @@ test('complex multiline string feature collection', function (t) {
 })
 
 test('complex multipolygon feature collection', function (t) {
-  esriExtent(portlandParksPolygons, function (err, extent) {
+  esriExtent(complexMultiPolygons, function (err, extent) {
     if (err) throw err
 
     t.deepEqual(extent, expectedParkPolygons)
