@@ -18,11 +18,13 @@ module.exports = function (collection, callback) {
 
     if (isPoint || isMultiPoint) {
       if (isPoint) coords = [[[coords]]]
+      else coords = [[coords]]
       loop(bbox, coords)
     }
 
     if (isLine || isMultiLine) {
       if (isLine) coords = [[coords]]
+      else coords = [coords]
       loop(bbox, coords)
     }
 
@@ -39,9 +41,11 @@ module.exports = function (collection, callback) {
 }
 
 function loop (bbox, coords) {
-  coords.forEach(function (r, j) {
-    r[0].forEach(function (c, k) {
-      extend(bbox, c)
+  coords.forEach(function (r) {
+    r.forEach(function (inner) {
+      inner.forEach(function (c) {
+        extend(bbox, c)
+      })
     })
   })
 }
