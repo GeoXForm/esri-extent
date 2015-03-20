@@ -2,5 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.1.0
+
+### Added
+* add support for multipoint geojson type ([#1](https://github.com/ngoldman/esri-extent/pull/1))
+* add more robust tests for complex multiline and multipolygon feature collections
+
+### Fixed
+* improve handling of polygons and multipolygons ([#1](https://github.com/ngoldman/esri-extent/pull/1) & [#2](https://github.com/ngoldman/esri-extent/pull/2))
+* fix caching bug with misplaced bbox variable
+
 ## 1.0.0
 * engage

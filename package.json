@@ -1,7 +1,7 @@
 {
   "name": "esri-extent",
   "description": "Get the Esri-formatted extent of a GeoJSON feature collection.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Nate Goldman <nate@ngoldman.me>",
   "bugs": {
     "url": "https://github.com/ngoldman/esri-extent/issues"
