@@ -29,7 +29,7 @@ module.exports = function (collection, callback) {
     }
 
     if (isPolygon || isMultiPolygon) {
-      if (isPolygon) coords = [coords]
+      coords = [coords]
       loop(bbox, coords)
     }
   })
