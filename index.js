@@ -1,9 +1,9 @@
 var bbox2extent = require('bbox2extent')
-var bbox = [Infinity, Infinity, -Infinity, -Infinity]
 
 module.exports = function (collection, callback) {
   // fallback if features passed directly
   var features = collection.features ? collection.features : collection
+  var bbox = [Infinity, Infinity, -Infinity, -Infinity]
 
   features.forEach(function (f, i) {
     if (!f.geometry) return
