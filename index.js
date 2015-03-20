@@ -9,26 +9,28 @@ module.exports = function (collection, callback) {
     if (!f.geometry) return
 
     var isPoint = f.geometry.type === 'Point'
+    var isMultiPoint = f.geometry.type === 'MultiPoint'
     var isLine = f.geometry.type === 'LineString'
     var isMultiLine = f.geometry.type === 'MultiLineString'
     var isPolygon = f.geometry.type === 'Polygon'
     var isMultiPolygon = f.geometry.type === 'MultiPolygon'
     var coords = f.geometry.coordinates
 
-    if (isPoint) extend(bbox, coords)
+    if (isPoint || isMultiPoint) {
+      if (isPoint) coords = [[[coords]]]
+      else coords = [[coords]]
+      loop(bbox, coords)
+    }
 
     if (isLine || isMultiLine) {
-      if (isMultiLine) coords = coords[0]
-      coords.forEach(function (c, j) {
-        extend(bbox, c)
-      })
+      if (isLine) coords = [[coords]]
+      else coords = [coords]
+      loop(bbox, coords)
     }
 
     if (isPolygon || isMultiPolygon) {
-      coords = isMultiPolygon ? coords[0][0] : coords[0]
-      coords.forEach(function (c, j) {
-        extend(bbox, c)
-      })
+      if (isPolygon) coords = [coords]
+      loop(bbox, coords)
     }
   })
 
@@ -36,6 +38,16 @@ module.exports = function (collection, callback) {
 
   if (callback) callback(null, extent)
   else return extent
+}
+
+function loop (bbox, coords) {
+  coords.forEach(function (r) {
+    r.forEach(function (inner) {
+      inner.forEach(function (c) {
+        extend(bbox, c)
+      })
+    })
+  })
 }
 
 function extend (bbox, coord) {
