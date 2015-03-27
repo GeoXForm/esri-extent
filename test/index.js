@@ -1,9 +1,9 @@
 var esriExtent = require('..')
-var exampleBasic = require('./geojson-spec-example.json')
-var exampleMulti = require('./geojson-multi-spec-example.json')
-var complexMultiLines = require('./portland-parks-lines.json')
-var complexMultiPolygons = require('./portland-parks-polygons.json')
-var largePoints = require('./colorado-snow.json')
+var exampleBasic = require('./data/geojson-spec-example.json')
+var exampleMulti = require('./data/geojson-multi-spec-example.json')
+var complexMultiLines = require('./data/portland-parks-lines.json')
+var complexMultiPolygons = require('./data/portland-parks-polygons.json')
+var largePoints = require('./data/colorado-snow.json')
 var test = require('tape')
 var expectedBasic = {
   xmin: 100,
