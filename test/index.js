@@ -3,7 +3,7 @@ var exampleBasic = require('./geojson-spec-example.json')
 var exampleMulti = require('./geojson-multi-spec-example.json')
 var complexMultiLines = require('./portland-parks-lines.json')
 var complexMultiPolygons = require('./portland-parks-polygons.json')
-var snowPoints = require('./snow.json')
+var largePoints = require('./colorado-snow.json')
 var test = require('tape')
 var expectedBasic = {
   xmin: 100,
@@ -45,7 +45,7 @@ var expectedParkPolygons = {
     latestWkid: 4326
   }
 }
-var expectedSnowPoints = {
+var expectedLargePoints = {
   xmin: -108.9395,
   ymin: 37.084968,
   xmax: -102,
@@ -93,10 +93,10 @@ test('complex multipolygon feature collection', function (t) {
 })
 
 test('large point feature collection', function (t) {
-  esriExtent(snowPoints, function (err, extent) {
+  esriExtent(largePoints, function (err, extent) {
     if (err) throw err
 
-    t.deepEqual(extent, expectedSnowPoints)
+    t.deepEqual(extent, expectedLargePoints)
     t.end()
   })
 })
