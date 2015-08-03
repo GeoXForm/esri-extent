@@ -1,9 +1,11 @@
 # esri-extent
 
-[![](https://img.shields.io/npm/v/esri-extent.svg?style=flat-square)](https://www.npmjs.com/package/esri-extent)
-[![](https://img.shields.io/travis/ngoldman/esri-extent.svg?style=flat-square)](https://travis-ci.org/ngoldman/esri-extent)
+> Get the Esri-formatted extent of a GeoJSON feature collection.
 
-Get the Esri-formatted extent of a GeoJSON feature collection.
+[![](https://img.shields.io/npm/v/esri-extent.svg?style=flat-square)](https://www.npmjs.com/package/esri-extent)
+[![](https://img.shields.io/travis/koopjs/esri-extent.svg?style=flat-square)](https://travis-ci.org/koopjs/esri-extent)
+
+## Install
 
 ```
 npm install esri-extent
@@ -38,4 +40,4 @@ esriExtent(example, function (err, extent) {
 
 ## License
 
-[ISC](LICENSE.md)
+[ISC](LICENSE)

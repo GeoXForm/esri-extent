@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 * add large point feature collection test to assure parity with [`koop.Extent`](https://github.com/Esri/koop/blob/v1.1.1/test/models/extent-test.js)
 
+### Changed
+* moved to koopjs github org
+
 ## 1.1.0
 
 ### Added
