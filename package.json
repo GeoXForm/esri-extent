@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "author": "Nate Goldman <nate@ngoldman.me>",
   "bugs": {
-    "url": "https://github.com/ngoldman/esri-extent/issues"
+    "url": "https://github.com/koopjs/esri-extent/issues"
   },
   "dependencies": {
     "bbox2extent": "^1.0.1"
@@ -17,7 +17,7 @@
   "files": [
     "index.js"
   ],
-  "homepage": "https://github.com/ngoldman/esri-extent",
+  "homepage": "https://github.com/koopjs/esri-extent",
   "keywords": [
     "bounding",
     "box",
@@ -31,7 +31,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngoldman/esri-extent.git"
+    "url": "https://github.com/koopjs/esri-extent.git"
   },
   "scripts": {
     "test": "standard && node test | tap-spec"
