@@ -10,7 +10,7 @@
     "bbox2extent": "^1.0.1"
   },
   "devDependencies": {
-    "standard": "^3.2.0",
+    "standard": "*",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
   },
