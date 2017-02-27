@@ -3,7 +3,7 @@
 > Get the Esri-formatted extent of a GeoJSON feature collection.
 
 [![](https://img.shields.io/npm/v/esri-extent.svg?style=flat-square)](https://www.npmjs.com/package/esri-extent)
-[![](https://img.shields.io/travis/koopjs/esri-extent.svg?style=flat-square)](https://travis-ci.org/koopjs/esri-extent)
+[![](https://img.shields.io/travis/GeoXForm/esri-extent.svg?style=flat-square)](https://travis-ci.org/GeoXForm/esri-extent)
 
 ## Install
 
