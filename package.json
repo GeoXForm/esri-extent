@@ -4,7 +4,7 @@
   "version": "1.1.2",
   "author": "Nate Goldman <nate@ngoldman.me>",
   "bugs": {
-    "url": "https://github.com/koopjs/esri-extent/issues"
+    "url": "https://github.com/GeoXForm/esri-extent/issues"
   },
   "dependencies": {
     "@types/geojson": "^7946.0.0",
@@ -19,7 +19,7 @@
   "files": [
     "index.js"
   ],
-  "homepage": "https://github.com/koopjs/esri-extent",
+  "homepage": "https://github.com/GeoXForm/esri-extent",
   "keywords": [
     "bounding",
     "box",
@@ -34,7 +34,7 @@
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/koopjs/esri-extent.git"
+    "url": "https://github.com/GeoXForm/esri-extent.git"
   },
   "scripts": {
     "test": "standard && node test | tap-spec"
