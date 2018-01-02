@@ -7,6 +7,7 @@
     "url": "https://github.com/koopjs/esri-extent/issues"
   },
   "dependencies": {
+    "@types/geojson": "^7946.0.0",
     "bbox2extent": "^1.0.1"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
   ],
   "license": "ISC",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/koopjs/esri-extent.git"
