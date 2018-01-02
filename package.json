@@ -1,7 +1,7 @@
 {
   "name": "esri-extent",
   "description": "Get the Esri-formatted extent of a GeoJSON feature collection.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Nate Goldman <nate@ngoldman.me>",
   "bugs": {
     "url": "https://github.com/koopjs/esri-extent/issues"
@@ -11,6 +11,7 @@
     "bbox2extent": "^1.0.1"
   },
   "devDependencies": {
+    "gh-release": "^3.1.1",
     "standard": "*",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0"
