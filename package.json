@@ -16,7 +16,8 @@
     "tape": "^3.5.0"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "homepage": "https://github.com/koopjs/esri-extent",
   "keywords": [
