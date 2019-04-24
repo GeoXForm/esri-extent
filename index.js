@@ -17,6 +17,9 @@ module.exports = function (collection, callback) {
     var coords = f.geometry.coordinates
 
     if (isPoint || isMultiPoint) {
+      if(Number.isNaN(coords[0]) || Number.isNaN(coords[1])){
+        console.warn(`Feature without geometries: ${JSON.stringify(f,null, 4)}`);
+      }
       if (isPoint) coords = [[[coords]]]
       else coords = [[coords]]
       loop(bbox, coords)
